@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<span class="signup">If you want logout!
+    <label for="check"><a href="{% url 'login' %}">Logout</a></label>
+</span>
+{% else %}
+<span class="signup">Don't have an account?
+    <label for="check"><a href="{% url 'register' %}">Register</a></label>
+</span>
+<span class="signup">Already have an account?
+    <label for="check"><a href="{% url 'login' %}">Login</a></label>
+</span>
+{% endif %}
+{% endblock content %}

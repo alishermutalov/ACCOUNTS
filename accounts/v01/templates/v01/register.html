@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="registration form">
+        <header>Signup</header>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div>
+                <input type="text" name="username" placeholder="Username" id="id_username">
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Email" id="id_email">
+            </div>
+            <div>
+                <input type="password" name="password1" placeholder="Create a password" id="id_password1">
+            </div>
+            <div>
+                <input type="password" name="password2" placeholder="Confirm your password" id="id_password2">
+            </div>
+            <input type="submit" class="button" value="Signup">
+        </form>
+        <div class="signup">
+            <span class="signup">Already have an account?
+                <label for="check"><a href="{% url 'login' %}">Login</a></label>
+            </span>
+        </div>
+    </div>
+</div>
+{% endblock content %}

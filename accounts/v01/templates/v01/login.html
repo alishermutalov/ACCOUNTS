@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="login form">
+      <header>Login</header>
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div>
+          {{ form.message }}
+        </div>        
+        <div>
+          <label for="id_username">Username:</label>
+          {{ form.username }}
+        </div>
+        <div>
+          <label for="id_password">Password:</label>
+          {{ form.password }}
+        </div>
+        <div>
+          <label for="id_username" >Enter characters from captcha: </label>
+          {{ form.captcha }}
+        </div>
+
+        <a href="#">Forgot password?</a>
+        <input type="submit" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+        <label for="check"><a href="{% url 'register' %}">Register</a></label>
+        </span>
+      </div>
+  </div>
+</div>
+{% endblock content %}
