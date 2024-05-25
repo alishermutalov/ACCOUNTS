@@ -10,7 +10,7 @@ Brief description or overview of the project.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Licence](#licence)
+- [License](#license)
 
 
 ## Installation
