@@ -22,7 +22,7 @@ Brief description or overview of the project.
 
 2. **Navigate to the project directory:**
     ```bash
-    cd project_directory
+    cd accounts
     ```
 
 3. **Create a virtual environment:**
